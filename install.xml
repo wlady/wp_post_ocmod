@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<modification>
+	<name>WP Posts</name>
+	<code>wp_post</code>
+	<version>1.0.0</version>
+	<author>Vladimir Zabara</author>
+	<link>https://github.com/wlady</link>
+
+	<file path="system/helper/general.php">
+		<operation>
+			<search><![CDATA[
+function token($length = 32) {
+				]]></search>
+            <add position="before"><![CDATA[
+function curl_get($url) {
+    ob_start();
+    $ch = curl_init();
+    curl_setopt_array(
+        $ch,
+        [
+            CURLOPT_URL    => $url,
+            CURLOPT_HEADER => false
+        ]
+    );
+    curl_exec($ch);
+    curl_close($ch);
+    $content = ob_get_clean();
+
+    return $content;
+}
+		]]></add>
+		</operation>
+	</file>
+
+</modification>
