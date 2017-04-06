@@ -3,16 +3,16 @@
 /**
  * Эти объявления должны быть перенесены в config.php (или bootstrap.php)
  *
- * define('NEWS_SERVICE',                  'http://news.opencart.dev');
- * define('NEWS_CATEGORIES',               '/wp-json/wp/v2/categories');
- * define('NEWS_POSTS',                    '/wp-json/wp/v2/posts');
+ * define('WP_ADDRESS',  'http://news.opencart.dev');
 */
+
+require_once(DIR_SYSTEM . 'helper/wp_post.php');
 
 class ControllerExtensionModuleWpPost extends Controller
 {
     public function index($setting)
     {
-        $url = NEWS_SERVICE . NEWS_POSTS;
+        $url = WP_ADDRESS . WP_POSTS;
         if (count($setting['categories'])) {
             $query = array();
             foreach ($setting['categories'] as $category) {

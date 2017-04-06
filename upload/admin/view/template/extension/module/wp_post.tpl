@@ -43,6 +43,7 @@
               <div class="form-group">
                 <label class="col-sm-2 control-label" for="input-categories"><?php echo $i18n['entry_categories']; ?></label>
                 <div class="col-sm-3">
+                  <?php if (isset($categories)) { ?>
                   <?php foreach ($categories as $category_key => $category_name) { ?>
                     <div class="checkbox">
                       <label>
@@ -50,6 +51,9 @@
                         <?php echo $category_name; ?>
                       </label>
                     </div>
+                  <?php } ?>
+                  <?php } else { ?>
+                    <p class="text-danger"><?php echo $i18n['error_not_found']; ?></p>
                   <?php } ?>
                 </div>
               </div>

@@ -33,3 +33,4 @@ $_['help_lot']         = '(Autocomplete)';
 // Error
 $_['error_permission'] = 'Warning: You do not have permission to modify featured module!';
 $_['error_name']       = 'Module Name must be between 3 and 64 characters!';
+$_['error_not_found']  = 'Categories are empty. Please check WP address!';

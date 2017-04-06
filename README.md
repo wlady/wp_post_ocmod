@@ -8,14 +8,9 @@
 
 ![screenshot-2](screenshot-2.png)
 
-Необходимо вручную перенести эти определения в файл config.php и указать правильный адрес сервиса:
-```
-define('NEWS_SERVICE',                  'http://news.opencart.dev');
-define('NEWS_CATEGORIES',               '/wp-json/wp/v2/categories');
-define('NEWS_POSTS',                    '/wp-json/wp/v2/posts');
-```
+После установки указать правильный адрес **WP** в файле _system/config/wp_post.php_.
 
-Я использовал шаблоны Twig для генерации ленты новостей. Пример шаблона для модуля "Все новости":
+Я использовал шаблоны **Twig** для генерации ленты новостей. Пример шаблона для модуля **Все новости**:
 ```
 {% for post in posts %}
         <div class="col-sm-6">
@@ -35,7 +30,7 @@ define('NEWS_POSTS',                    '/wp-json/wp/v2/posts');
 {% endfor %}
 ```
 
-Для использования Twig в OpenCart 2.3 достаточно установить необходимые пакеты с помощью composer:
+Для использования **Twig** в **OpenCart 2.3** достаточно установить необходимые пакеты с помощью _composer_:
 
 ```sh
 composer require twig/twig --prefer-dist

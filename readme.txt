@@ -2,12 +2,7 @@
 При использовании совместно с WP плагином "Post To OpenCart" возможно получать посты непосредственно из WP
 и сохранять их локально для дальнейшей обработки/показа (смотри https://github.com/wlady/wp-post-to-opencart).
 
-Необходимо вручную перенести эти определения в файл config.php и указать правильный адрес сервиса:
-
-define('NEWS_SERVICE',                  'http://news.opencart.dev');
-define('NEWS_CATEGORIES',               '/wp-json/wp/v2/categories');
-define('NEWS_POSTS',                    '/wp-json/wp/v2/posts');
-
+После установки указать правильный адрес WP в файле system/config/wp_post.php.
 
 Я использовал шаблоны Twig для генерации ленты новостей. Пример шаблона для модуля "Все новости":
 
