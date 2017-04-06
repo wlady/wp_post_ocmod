@@ -4,15 +4,7 @@
 При использовании совместно с **WP** плагином **Post To OpenCart** возможно получать посты непосредственно из **WP**
 и сохранять их локально для дальнейшей обработки/показа (смотри https://github.com/wlady/wp-post-to-opencart).
 
-![screenshot-1](screenshot-1.png)
-
-![screenshot-2](screenshot-2.png)
-
-![screenshot-3](screenshot-3.png)
-
 После установки указать правильный адрес **WP** в файле _system/config/wp_post.php_.
-
-![screenshot-4](screenshot-4.png)
 
 Я использовал шаблоны **Twig** для генерации ленты новостей. Пример шаблона для модуля **Все новости**:
 ```
@@ -37,11 +29,20 @@
 </div>
 ```
 
-![screenshot-5](screenshot-5.png)
-
 
 Для использования **Twig** в **OpenCart 2.3** достаточно установить необходимые пакеты с помощью _composer_:
 
 ```sh
 composer require twig/twig --prefer-dist
 ```
+
+![screenshot-1](screenshot-1.png)
+
+![screenshot-2](screenshot-2.png)
+
+![screenshot-3](screenshot-3.png)
+
+![screenshot-4](screenshot-4.png)
+
+![screenshot-5](screenshot-5.png)
+
