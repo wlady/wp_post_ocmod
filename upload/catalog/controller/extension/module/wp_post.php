@@ -19,7 +19,8 @@ class ControllerExtensionModuleWpPost extends Controller
                 $query[] = 'categories[]=' . $category;
             }
             $query[] = 'per_page=' . $setting['limit'];
-            $url .= '?' . implode('&', $query);
+            $concat = stripos($url, '?')!==false ? '&' : '?';
+            $url .= $concat . implode('&', $query);
         }
         $res = curl_get($url);
         if ($posts = json_decode($res)) {
@@ -36,7 +37,8 @@ class ControllerExtensionModuleWpPost extends Controller
         }
         $item_tpl = html_entity_decode($setting['tpl']);
 
-        // Внимание!!! Я использую шаблоны Twig
+        // Внимание!!! Я использую шаблоны Twig - не забудь установить
+        // composer require twig/twig --prefer-dist
         $loader = new Twig_Loader_Array([
             'index' => $item_tpl,
         ]);
