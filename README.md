@@ -36,6 +36,8 @@
 composer require twig/twig --prefer-dist
 ```
 
+![wordpress-0](wordpress-0.png)
+
 ![screenshot-0](screenshot-0.png)
 
 ![screenshot-1](screenshot-1.png)
