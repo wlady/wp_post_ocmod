@@ -13,7 +13,7 @@
                     <a href="{{ post.link }}" class="blognews-item" target="_blank">
                         <img class="blognews-pic" src="{{ post.post_image.thumbnail.source_url }}" alt="" />
                         <span class="blognews-info">
-                        <h4 class="blognews-title text-overflow">{{ post.title.rendered | raw }}</h3>
+                        <h4 class="blognews-title text-overflow">{{ post.title.rendered | raw }}</h4>
                         <span class="blognews-text">{{ post.excerpt.rendered | raw }}
                             <span class="blognews-more">... <i>read more</i></span>
                         </span>
