@@ -1,18 +1,12 @@
 <?php
 
-/**
- * Эти объявления должны быть перенесены в config.php (или bootstrap.php)
- *
- * define('WP_ADDRESS',  'http://news.opencart.dev');
-*/
-
-require_once(DIR_SYSTEM . 'helper/wp_post.php');
-
 class ControllerExtensionModuleWpPost extends Controller
 {
     public function index($setting)
     {
-        $url = WP_ADDRESS . WP_POSTS;
+        $this->load->helper('wp_post');
+        $this->load->config('wp_post');
+        $url = $this->config->get('wp_address') . $this->config->get('wp_posts');
         if (count($setting['categories'])) {
             $query = array();
             foreach ($setting['categories'] as $category) {
